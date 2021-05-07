@@ -1,21 +1,12 @@
 <div id="messages">
     <h2 class="text-center">Messages</h2>
     <div id="messages-display">
-        <a href="#" class="message d-flex align-items-center">
+        <a *ngFor="let message of messages" href="#" class="message d-flex align-items-center">
             <img class="rounded-circle mx-3" src="https://picsum.photos/128"/>
             <div class="message-content">
-                <h5>John Smith</h5>
+                <h5>{{ message.author }}</h5>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                </p>
-            </div>
-        </a>
-        <a href="#" class="message d-flex align-items-center">
-            <img class="rounded-circle mx-3" src="https://picsum.photos/128"/>
-            <div class="message-content">
-                <h5>John Smith</h5>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    {{ message.message }}
                 </p>
             </div>
         </a>
