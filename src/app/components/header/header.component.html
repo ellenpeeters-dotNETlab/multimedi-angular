@@ -8,9 +8,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <div class="navbar-nav">
-            <a class="nav-link nav-item" routerLink="">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link nav-item" routerLink="contact">Contact</a>
-            <a class="nav-link nav-item" routerLink="blog">Blog</a>
+            <a class="nav-link nav-item" routerLink="home" routerLinkActive="active">Home</a>
+            <a class="nav-link nav-item" routerLink="contact" routerLinkActive="active">Contact</a>
+            <a class="nav-link nav-item" routerLink="blog" routerLinkActive="active">Blog</a>
         </div>
+    </div>
+    <div>
+        <button *ngIf="!isLoggedIn" (click)="logIn()">Log in</button>
+        <button *ngIf="isLoggedIn" (click)="logOut()">Log out</button>
     </div>
 </nav>

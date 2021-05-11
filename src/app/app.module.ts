@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { MessageService } from './services/message.service';
+import { MessageService } from './services/message/message.service';
+import { LoginService } from './services/login/login.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -30,7 +31,8 @@ import { Pagina404Component } from './components/pagina404/pagina404.component';
     AppRoutingModule
   ],
   providers: [
-    MessageService
+    MessageService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
